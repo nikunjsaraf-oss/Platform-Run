@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/background.png" type="Texture" id=1]
+[ext_resource path="res://source/UI/Play.tscn" type="PackedScene" id=2]
+[ext_resource path="res://source/UI/Title.tscn" type="PackedScene" id=3]
+[ext_resource path="res://source/UI/Quit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/UI THEME.tres" type="Theme" id=5]
+
+[node name="Title" type="Control"]
+anchor_right = 0.996
+anchor_bottom = 0.993
+margin_right = 7.68005
+margin_bottom = 7.55994
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -0.00012207
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" parent="." instance=ExtResource( 3 )]
+margin_left = -277.0
+margin_top = 232.0
+margin_right = 277.0
+margin_bottom = 313.0
+
+[node name="Play" parent="." instance=ExtResource( 2 )]
+
+[node name="Quit" parent="." instance=ExtResource( 4 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = 68.0001
+margin_right = 112.0
+margin_bottom = 156.0

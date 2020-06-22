@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://source/UI/Play.gd" type="Script" id=1]
+
+[node name="Play" type="Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = -44.0
+margin_right = 112.0
+margin_bottom = 44.0
+text = "Start"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+next_scene = "res://source/Levels/Level 1.tscn"
+[connection signal="button_up" from="." to="." method="_on_Play_button_up"]

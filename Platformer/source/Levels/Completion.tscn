@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/UI THEME.tres" type="Theme" id=1]
+[ext_resource path="res://Assets/background.png" type="Texture" id=2]
+[ext_resource path="res://Assets/enemy.png" type="Texture" id=3]
+[ext_resource path="res://Assets/player.png" type="Texture" id=4]
+[ext_resource path="res://source/UI/Quit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://source/UI/Play.tscn" type="PackedScene" id=6]
+[ext_resource path="res://source/Levels/Completion.gd" type="Script" id=7]
+
+[node name="Control" type="Control"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+theme = ExtResource( 1 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.175
+anchor_top = 0.104
+anchor_right = 0.825
+anchor_bottom = 0.17
+margin_left = -112.0
+margin_top = -8.32
+margin_right = -96.0002
+margin_bottom = 8.39999
+text = "Congratulations!! On Completing the game!
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 55.9999
+margin_top = 432.0
+margin_right = 164.0
+margin_bottom = 525.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -1464.0
+margin_top = -108.0
+margin_right = -1368.0
+margin_bottom = -12.0
+texture = ExtResource( 4 )
+
+[node name="Play" parent="." instance=ExtResource( 6 )]
+margin_left = -344.0
+margin_top = -180.0
+margin_right = -16.0
+margin_bottom = -92.0
+text = "Play Again"
+next_scene = "res://source/Levels/Title.tscn"
+
+[node name="Quit" parent="." instance=ExtResource( 5 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -344.0
+margin_top = -28.0
+margin_right = -16.0001
+margin_bottom = 60.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 304.0
+margin_top = 216.0
+margin_right = 1366.0
+margin_bottom = 297.0
+text = "Your score is %s and you died %s times!"
